@@ -21,6 +21,7 @@ def process_url(item, exclude_websites):
                 [f'^http(s)?://(www.)?{website.lower()}.*' for website in exclude_websites]]):
         return
     url = item.get('link')
+    return url
     if re.match(GOOGLE_NEWS_REGEX, url):
         url = requests.head(url).headers.get('location', url)
     return url
