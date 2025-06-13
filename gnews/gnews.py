@@ -41,7 +41,7 @@ class GNews:
         self.end_date = self.end_date = end_date
         self._start_date = self.start_date = start_date
         self._exclude_websites = exclude_websites if exclude_websites and isinstance(exclude_websites, list) else []
-        self._proxy = {'http': proxy, 'https': proxy} if proxy else None
+        self._proxy = proxy if proxy else None
 
     def _ceid(self):
         time_query = ''
